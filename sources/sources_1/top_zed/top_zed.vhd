@@ -1,16 +1,16 @@
 --------------------------------------------------------------
 --
--- (C) Copyright Kutu Pty. Ltd. 2014.
+-- (C) Copyright Kutu Pty. Ltd. 2015.
 --
--- file: top_zc702.vhd
+-- file: top_zed.vhd
 --
 -- author: Greg Smart
 --
 --------------------------------------------------------------
 --------------------------------------------------------------
 --
--- This module is the top level module of zc702_base
--- running on a Xilinx zc702 board.
+-- This module is the top level module of zedboard_base
+-- running on a ZED board.
 --
 --------------------------------------------------------------
 
@@ -22,7 +22,7 @@ use IEEE.std_logic_UNSIGNED.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 
-entity top_zc702 is
+entity top_zed is
    port (
       DDR_addr          : inout std_logic_vector ( 14 downto 0 );
       DDR_ba            : inout std_logic_vector ( 2 downto 0 );
@@ -55,9 +55,9 @@ entity top_zc702 is
       spdif_tx          : out std_logic;
       led               : out std_logic_vector(7 downto 0)
    );
-end top_zc702;
+end top_zed;
 
-architecture RTL of top_zc702 is
+architecture RTL of top_zed is
 
    component system_top_wrapper is
    port (
